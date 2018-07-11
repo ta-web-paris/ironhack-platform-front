@@ -1,0 +1,25 @@
+<h2>Sign Up</h2>
+
+<div class="signup-container">
+
+  <form (ngSubmit)="signupSubmit()">
+    <label>Username:</label>
+    <input type="text" [(ngModel)]="formCreds.username" placeholder="blah" name="username">
+    
+    <br>
+
+    <label>Email:</label>
+    <input type="text" [(ngModel)]="formCreds.email" placeholder="bleh" name="email">
+
+    <br>
+
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="formCreds.password" placeholder="****" name="password">
+
+    <br>
+
+    <button mz-button>Submit</button>
+    <a mz-button routerLink="/login" align="right" flat="true">Log In</a>
+  </form>
+
+</div>
