@@ -14,7 +14,7 @@ export class HttpService {
 
 	postLogin( creds: LoginCredentials ) {
 		return this.http
-		.post( `${ environment.backUrl }/admin/login`, creds, { withCredentials: true } )
+		.post( `${ environment.backUrl }/admin/process-login`, creds, { withCredentials: true } )
 		.toPromise()
 		.then(( backEndResponse: any ) => {
 			this.currentUser = backEndResponse.userInfo;
